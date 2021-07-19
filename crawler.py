@@ -2,14 +2,15 @@ import requests
 from bs4 import BeautifulSoup
 
 
-url = 'http://www.itunescharts.net/us/charts/songs/current/'
+url = 'http://www.itunescharts.net/us/charts/songs/current/' 
+
 response = requests.get(url)
 
 html = response.content
 page = BeautifulSoup(html, 'html.parser')
 
 chart = page.find('ul', {"id":"chart"})
-# print(chart)
+# print(chart) # To check the structure of the page and to see in which element the data we want is located.
 
 # TESTING FOR ONE SONG ONLY
 # n1 = page.find('li', {'id':'chart_us_songs_1'})

@@ -1,2 +1,2 @@
 # wbscrp
-we crawling with python library
+web scraping with python library
